@@ -6,6 +6,11 @@ public class Drive : MonoBehaviour
 {
     public float speed = 10.0f;
     public float rotationSpeed = 100.0f;
+    private float VEL_TUR = 0.2f;
+    public Transform Turret;
+    public Transform Gunner;
+    public GameObject Bullet;
+
 
     void Update()
     {
@@ -24,5 +29,18 @@ public class Drive : MonoBehaviour
 
         // Rotate around our y-axis
         transform.Rotate(0, rotation, 0);
+
+        if (Input.GetKey(KeyCode.T))
+        {
+            Turret.RotateAround(Turret.position, Turret.right,VEL_TUR);
+        }
+        else if (Input.GetKey(KeyCode.G))
+        {
+            Turret.RotateAround(Turret.position, Turret.right,-VEL_TUR);
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(Bullet, Gunner.position, Gunner.rotation);
+        }
     }
 }
