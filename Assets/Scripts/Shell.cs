@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Shell : MonoBehaviour
 {
     public GameObject explosion;
+    public float speed = 3f;
+    private float Force = 1000f;
+    private float Mass = 10f;
+    private float Acceleration;
 
     void OnCollisionEnter(Collision col)
     {
@@ -25,6 +31,8 @@ public class Shell : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-
+        Acceleration = Force / Mass;
+        speed += Acceleration * Time.deltaTime;
+        this.transform.Translate(0,0,speed*Time.deltaTime);
     }
 }

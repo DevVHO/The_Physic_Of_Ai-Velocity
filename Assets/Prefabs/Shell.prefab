@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 3757830479292245367}
   - component: {fileID: 7429522674907502990}
   - component: {fileID: -2987647594956549592}
-  - component: {fileID: 4632637762823483168}
+  - component: {fileID: 5096307696674897221}
+  - component: {fileID: 4054872425723785927}
+  - component: {fileID: 2069778318846863615}
   m_Layer: 0
   m_Name: Shell
   m_TagString: Untagged
@@ -104,11 +106,11 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.29239443
-  m_Height: 0.58478886
-  m_Direction: 1
+  m_Radius: 0.23
+  m_Height: 0.77
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.16823617}
---- !u!114 &4632637762823483168
+--- !u!114 &5096307696674897221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +119,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 9162047389006064978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d83ae0dfd6cce4ea353ffe5c01bfce, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a460c8290e014c3caa73ba461ac9a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 195792, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
+--- !u!114 &4054872425723785927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9162047389006064978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aacaa7a7568b94e06b8e07095cfb1978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &2069778318846863615
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9162047389006064978}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
