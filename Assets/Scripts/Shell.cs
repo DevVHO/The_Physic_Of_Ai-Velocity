@@ -7,12 +7,12 @@ using UnityEngine.Rendering;
 public class Shell : MonoBehaviour
 {
     public GameObject explosion;
-    float speed = 0;
-    float Force = 1;
-    float Mass = 10;
+    float speed = 0.0f;
+    float Force = 4.0f;
+    float Mass = 30.0f;
     float yspeed = 0f;
-    float drag = 1;
-    float gravity = 9.8f;
+    float drag = 1.0f;
+    float gravity = -9.8f;
     float gAccel;
     float Acceleration;
 
