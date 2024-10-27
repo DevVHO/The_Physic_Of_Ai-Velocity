@@ -38,7 +38,7 @@ public class Drive : MonoBehaviour
         {
             Turret.RotateAround(Turret.position, Turret.right,-VEL_TUR);
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.F))
         {
             Instantiate(Bullet, Gunner.position, Gunner.rotation);
         }
